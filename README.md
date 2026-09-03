@@ -2,6 +2,19 @@
 
 A reproducible Next.js leaderboard and Lucid Agents API for workload-specific MLPerf Inference v6.0 accelerator comparisons.
 
+## WebMCP Challenge extension (August 25–September 3, 2026)
+
+The leaderboard is now a shared human-and-agent research surface. This extension was created during the WebMCP Challenge submission period and adds four browser-native tools through the imperative `document.modelContext.registerTool()` API:
+
+| WebMCP tool | Shared outcome |
+| --- | --- |
+| `list_inference_slices` | Discovers safe exact comparison boundaries and counts. |
+| `configure_inference_leaderboard` | Changes the filters the human sees, keeping both participants on the same view. |
+| `compare_inference_accelerators` | Builds and renders a 2–8 chip comparison with missing-evidence reasons and immutable sources. |
+| `clear_inference_comparison` | Removes the shared comparison without disturbing the chosen leaderboard filters. |
+
+The browser tools reuse the checked-in normalized dataset and exact-slice invariants. They do not create a parallel ranking system, fetch untrusted runtime data, or bypass the existing x402 API. Chrome requires WebMCP testing to be enabled; ChatGPT's in-app browser supports it directly. See [WEBMCP.md](WEBMCP.md) for prompts, architecture, security boundaries, and a repeatable demo.
+
 The index never claims that one chip is universally fastest. Every ranking is confined to an exact comparison slice: release, Closed division, workload, scenario, accuracy target, metric and unit. Official submitted-system throughput is the default; per-accelerator numbers are labeled derived arithmetic and appear only when the source states an integer accelerator count.
 
 ## Evidence boundary
@@ -49,7 +62,7 @@ Pinned SDKs: `@lucid-agents/core@5.0.0`, `@lucid-agents/http@4.0.0`, `@lucid-age
 Example free invocation:
 
 ```bash
-curl -sS -X POST https://inference-chip-index.workers.dev/api/agent/entrypoints/get-dataset-status/invoke \
+curl -sS -X POST https://inference-chip-index.assorted-client-a65.workers.dev/api/agent/entrypoints/get-dataset-status/invoke \
   -H 'content-type: application/json' \
   --data '{"input":{}}'
 ```
@@ -68,3 +81,5 @@ See [METHODOLOGY.md](METHODOLOGY.md), [DATA_SOURCES.md](DATA_SOURCES.md), [PAYME
 ## License and marks
 
 This is an independent normalization of public MLCommons evidence. MLPerf is a trademark of MLCommons. Source results retain their upstream terms. The interface and original code are provided for evaluation; results are evidence, not purchasing advice.
+
+The original application code is licensed under the [MIT License](LICENSE). Third-party benchmark data remains subject to its upstream terms.
