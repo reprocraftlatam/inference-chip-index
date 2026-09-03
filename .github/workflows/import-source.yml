@@ -8,14 +8,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Download verified source
+      - name: Import verified source once
         run: |
-          curl -fsSL https://inference-chip-index-source.assorted-client-a65.workers.dev/source.tar.gz -o /tmp/source.tar.gz
-          test "$(sha256sum /tmp/source.tar.gz | cut -d' ' -f1)" = "4d070abc6f9ef4c8f884fe965bff6ca06b056f651bc1590055caa235275d1002"
+          if [ -f README.md ]; then
+            echo "Source already imported."
+            exit 0
+          fi
+          curl -fsSL https://inference-chip-index-source.assorted-client-a65.workers.dev/source-no-workflows.tar.gz -o /tmp/source.tar.gz
+          test "$(sha256sum /tmp/source.tar.gz | cut -d' ' -f1)" = "7113dc10bf0cab64c2f2ee1d68abe9f1b566ef8fca4f9240743dc8c764dbd2a9"
           tar -xzf /tmp/source.tar.gz
-          rm -f .github/workflows/import-source.yml
-      - name: Commit source
-        run: |
           git config user.name "Reprocraft LATAM"
           git config user.email "reprocraftlatam@proton.me"
           git add -A
