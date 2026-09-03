@@ -1,0 +1,11 @@
+[
+  {
+    "version": "sha256:d953bc0bac8cd2a80fd2118a23628cf3e9bfa2148de1e79cb9fe973e28e671af",
+    "generatedAt": "2026-09-02T07:45:00.000Z",
+    "mode": "full-source",
+    "added": 145,
+    "changed": 0,
+    "tombstoned": 0,
+    "note": "Initial pinned MLPerf Inference v6.0 Closed snapshot."
+  }
+]

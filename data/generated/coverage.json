@@ -1,0 +1,142 @@
+[
+  {
+    "workload": "llama3.1-8b",
+    "scenario": "Offline",
+    "accepted": 19,
+    "vendors": [
+      "NVIDIA"
+    ],
+    "families": [
+      "B200",
+      "B300",
+      "H200",
+      "RTX PRO 4500 Blackwell",
+      "RTX PRO 6000 Blackwell"
+    ]
+  },
+  {
+    "workload": "llama3.1-8b",
+    "scenario": "Server",
+    "accepted": 19,
+    "vendors": [
+      "NVIDIA"
+    ],
+    "families": [
+      "B200",
+      "B300",
+      "H200",
+      "RTX PRO 4500 Blackwell",
+      "RTX PRO 6000 Blackwell"
+    ]
+  },
+  {
+    "workload": "llama3.1-8b",
+    "scenario": "Interactive",
+    "accepted": 10,
+    "vendors": [
+      "NVIDIA"
+    ],
+    "families": [
+      "B200",
+      "B300",
+      "RTX PRO 6000 Blackwell"
+    ]
+  },
+  {
+    "workload": "gpt-oss-120b",
+    "scenario": "Offline",
+    "accepted": 27,
+    "vendors": [
+      "AMD",
+      "Intel",
+      "NVIDIA"
+    ],
+    "families": [
+      "Arc Pro B60",
+      "Arc Pro B70",
+      "B200",
+      "B300",
+      "GB200 NVL72",
+      "GB300 NVL72",
+      "H200",
+      "Instinct MI355X",
+      "RTX PRO 6000 Blackwell"
+    ]
+  },
+  {
+    "workload": "gpt-oss-120b",
+    "scenario": "Server",
+    "accepted": 27,
+    "vendors": [
+      "AMD",
+      "Intel",
+      "NVIDIA"
+    ],
+    "families": [
+      "Arc Pro B60",
+      "Arc Pro B70",
+      "B200",
+      "B300",
+      "GB200 NVL72",
+      "GB300 NVL72",
+      "H200",
+      "Instinct MI355X",
+      "RTX PRO 6000 Blackwell"
+    ]
+  },
+  {
+    "workload": "gpt-oss-120b",
+    "scenario": "Interactive",
+    "accepted": 4,
+    "vendors": [
+      "NVIDIA"
+    ],
+    "families": [
+      "B200",
+      "B300",
+      "GB200 NVL72",
+      "GB300 NVL72"
+    ]
+  },
+  {
+    "workload": "deepseek-r1",
+    "scenario": "Offline",
+    "accepted": 18,
+    "vendors": [
+      "NVIDIA"
+    ],
+    "families": [
+      "B200",
+      "B300",
+      "GB200 NVL72",
+      "GB300 NVL72"
+    ]
+  },
+  {
+    "workload": "deepseek-r1",
+    "scenario": "Server",
+    "accepted": 18,
+    "vendors": [
+      "NVIDIA"
+    ],
+    "families": [
+      "B200",
+      "B300",
+      "GB200 NVL72",
+      "GB300 NVL72"
+    ]
+  },
+  {
+    "workload": "deepseek-r1",
+    "scenario": "Interactive",
+    "accepted": 3,
+    "vendors": [
+      "NVIDIA"
+    ],
+    "families": [
+      "B300",
+      "GB200 NVL72",
+      "GB300 NVL72"
+    ]
+  }
+]

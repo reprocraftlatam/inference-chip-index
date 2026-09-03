@@ -1,0 +1,14 @@
+{
+  "release": "v6.0",
+  "division": "Closed",
+  "sourceCommit": "4d3916ac9cf474b679cdfcf492d43a0559418ad1",
+  "sourceRepository": "mlcommons/inference_results_v6.0",
+  "generatedAt": "2026-09-02T07:45:00.000Z",
+  "reviewedAt": "2026-09-02T07:45:00.000Z",
+  "freshness": "pinned",
+  "snapshotSha256": "sha256:d953bc0bac8cd2a80fd2118a23628cf3e9bfa2148de1e79cb9fe973e28e671af",
+  "recordCount": 145,
+  "systemCount": 50,
+  "acceleratorCount": 13,
+  "quarantineCount": 0
+}

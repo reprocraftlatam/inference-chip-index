@@ -1,0 +1,8 @@
+{
+  "description": "Negative fixture only; never published as benchmark data.",
+  "submitter": "Fixture Labs",
+  "system_name": "ambiguous-count-negative-test",
+  "accelerator_model_name": "Unknown Accelerator",
+  "accelerators_per_node": "x8 inferred only from name",
+  "number_of_nodes": "one-ish"
+}

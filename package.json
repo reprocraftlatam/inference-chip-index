@@ -1,0 +1,41 @@
+{
+  "name": "inference-chip-index",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "type-check": "tsc --noEmit",
+    "test": "node --test --import tsx tests/**/*.test.ts",
+    "lint": "tsc --noEmit",
+    "verify": "npm run data:verify && npm run lint && npm test && npm run build && npm run smoke",
+    "smoke": "node scripts/smoke-runtime.mjs",
+    "data:fixture": "tsx scripts/import-mlperf.ts --mode fixture",
+    "data:full": "tsx scripts/import-mlperf.ts --mode full-source",
+    "data:verify": "tsx scripts/verify-generated.ts",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy"
+  },
+  "dependencies": {
+    "@lucid-agents/core": "5.0.0",
+    "@lucid-agents/http": "4.0.0",
+    "@lucid-agents/payments": "5.0.0",
+    "next": "15.5.24",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@opennextjs/cloudflare": "1.20.6",
+    "@types/node": "22.15.30",
+    "@types/react": "19.1.6",
+    "@types/react-dom": "19.1.5",
+    "tsx": "4.20.3",
+    "typescript": "5.8.3",
+    "wrangler": "4.128.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
