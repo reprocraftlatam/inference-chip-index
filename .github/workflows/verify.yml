@@ -1,0 +1,19 @@
+name: verify
+on:
+  push:
+  pull_request:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Clone pinned MLPerf source
+        run: git clone --filter=blob:none --no-checkout https://github.com/mlcommons/inference_results_v6.0 ../mlperf-inference-v6 && git -C ../mlperf-inference-v6 fetch origin 4d3916ac9cf474b679cdfcf492d43a0559418ad1
+      - run: npm ci
+      - run: npm run data:fixture
+      - run: npm run data:full
+      - run: npm run verify
